@@ -1,5 +1,6 @@
 require 'sinatra/base'
 
+
 class UrlShortener < Sinatra::Application
   set :public_folder, './public'
 
@@ -28,7 +29,6 @@ class UrlShortener < Sinatra::Application
   get '/favicon.ico' do
     "None here"
   end
-
 
   get '/:id' do
     show_stats = params['stats'] == 'true'
